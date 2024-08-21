@@ -1,0 +1,35 @@
+@use "../../constants/colors.module.scss" as *;
+
+@use "../../constants/breakpoints.module.scss" as screens;
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &_title {
+    color: $primary_blue;
+    font-weight: 600;
+    font-size: 34px;
+
+    cursor: pointer;
+
+    transition: all ease-in-out 300ms;
+
+    //Hover
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    // Media
+    @media (max-width: screens.$tablet) {
+      font-size: 24px;
+    }
+  }
+
+  &_search {
+    display: flex;
+  }
+}

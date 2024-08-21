@@ -1,0 +1,25 @@
+@use "../../constants/colors.module.scss" as *;
+
+.container {
+  transition: all ease-in-out 300ms !important;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  &_add {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    &_buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &_error {
+      color: red;
+    }
+  }
+}

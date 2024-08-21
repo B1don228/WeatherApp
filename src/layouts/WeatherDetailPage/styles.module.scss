@@ -1,0 +1,51 @@
+@use "../../constants/colors.module.scss" as *;
+@use "../../constants/breakpoints.module.scss" as screens;
+
+.container {
+  &_description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 15px;
+
+    font-size: 22px;
+
+    @media (max-width: screens.$tablet) {
+      font-size: 12px;
+    }
+  }
+
+  &_temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: screens.$tablet) {
+      flex-direction: column;
+      margin-top: 5px;
+    }
+
+    &_text {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      font-size: 36px;
+    }
+  }
+
+  &_date {
+    text-align: start;
+  }
+}
+
+// Components
+
+.bold_text {
+  font-weight: 500;
+}
+.gray_text {
+  color: $primary_gray;
+}
